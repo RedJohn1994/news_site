@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dsadas</title>
+</head>
+<body>
+    <h1>Все объявления</h1>
+
+    <ul>
+      {% if news_all %}
+
+      {% for news in news_all %}
+        <h1>Заголовок: {{news.title}}</h1>
+        <h2>Статья: {{news.content}}</h2>
+
+        <button type="submit"><a href="news/comments">Добавить комментарий </a></button>
+        <h2>Комментарий: {{news.comment}}</h2>
+        <h2>Комментарий: {{news.comment.comments}}</h2>
+
+      {% endfor %}
+      {% endif %}
+    </ul>
+
+</body>
+</html>
